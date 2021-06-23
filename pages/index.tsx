@@ -1,39 +1,35 @@
+import Image from 'next/image';
 import Footer from 'components/Footer';
+import photo from 'public/programador-de-cafe.jpeg';
 
 const Home = () => {
   return (
     <div>
       <main>
-        <h1>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p>
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div>
-          <a href="https://nextjs.org/docs">
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn">
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a href="https://github.com/vercel/next.js/tree/master/examples">
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app">
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <div className="flex flex-row">
+          <div className="flex flex-col justify-center lg:gap-16 md:gap-8 sm:gap-6 p-6 bg-pink-50">
+            <h1 className="lg:text-5xl md:text-3xl font-mono">
+              Sou um programador independente de cafés!
+            </h1>
+            <h2 className="lg:text-3xl md:text-xl font-mono">
+              Faço sites e aplicativos de graça buscando causar impacto social
+            </h2>
+            <div className="flex sm:flex-col md:flex-row justify-center gap-4">
+              <button
+                onClick={() => window.alert('Em Breve')}
+                className="w-full p-4 bg-black text-white rounded-lg font-mono"
+              >
+                Preciso de um site!
+              </button>
+              <button
+                onClick={() => window.alert('Em breve também xD')}
+                className="w-full p-4 bg-white border border-black rounded-lg font-mono"
+              >
+                Ver outros projetos
+              </button>
+            </div>
+          </div>
+          <Image src={photo} alt="Man drinking coffee" />
         </div>
       </main>
       <Footer />

@@ -6,8 +6,8 @@ import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer className="h-96 bg-gray-700 text-white">
-      <div className="p-4">
+    <footer className="bg-gray-700 text-white">
+      <div className="px-6 py-4">
         <ul>
           <li className="my-3">
             <a
